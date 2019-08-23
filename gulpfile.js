@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-    gutil = require('gulp-util'),
     sass = require('gulp-sass'),
     coffee = require('gulp-coffee'),
     watch = require('gulp-watch'),
