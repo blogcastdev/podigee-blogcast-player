@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/blogcastdev/podigee-podcast-player.git"
+    "url": "https://github.com/blogcastdev/podigee-blogcast-player.git"
   },
   "bugs": {
     "url": "https://github.com/podigee/podigee-podcast-player/issues"
@@ -52,13 +52,43 @@
     "node": "*",
     "yarn": "*"
   },
-  "dependencies": {
-    "elasticlunr": "^0.9.0",
-    "jquery": "^3.4.1",
-    "lodash": "^4.17.4",
-    "rivets": "^0.9.6",
-    "sightglass": "^0.2.4",
-    "tinycolor2": "^1.4.1",
-    "vtt.js": "github:mozilla/vtt.js#f823de8"
+ "dependencies": {
+    "elasticlunr": {
+      "version": "0.9.5",
+      "resolved": "https://registry.npmjs.org/elasticlunr/-/elasticlunr-0.9.5.tgz",
+      "integrity": "sha1-ZVQbswnd3Qz5Ty0ciGGyvmUbsNU="
+    },
+    "jquery": {
+      "version": "3.4.1",
+      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.4.1.tgz",
+      "integrity": "sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw=="
+    },
+    "lodash": {
+      "version": "4.17.15",
+      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz",
+      "integrity": "sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A=="
+    },
+    "rivets": {
+      "version": "0.9.6",
+      "resolved": "https://registry.npmjs.org/rivets/-/rivets-0.9.6.tgz",
+      "integrity": "sha1-UIHl7TlE3vf2/NOjJu5CFoeZ/TM=",
+      "requires": {
+        "sightglass": "~0.2.4"
+      }
+    },
+    "sightglass": {
+      "version": "0.2.6",
+      "resolved": "https://registry.npmjs.org/sightglass/-/sightglass-0.2.6.tgz",
+      "integrity": "sha1-kSC7hS0lnPghJ0hWN1u9+QCYOEE="
+    },
+    "tinycolor2": {
+      "version": "1.4.1",
+      "resolved": "https://registry.npmjs.org/tinycolor2/-/tinycolor2-1.4.1.tgz",
+      "integrity": "sha1-9PrTM0R7wLB9TcjpIJ2POaisd+g="
+    },
+    "vtt.js": {
+      "version": "github:mozilla/vtt.js#f823de834bc23d65300e58a6d391916bc00bcb75",
+      "from": "github:mozilla/vtt.js#f823de8"
+    }
   }
 }
