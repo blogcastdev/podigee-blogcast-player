@@ -438,7 +438,7 @@ browserify@3.x:
     buffer "~2.1.4"
     builtins "~0.0.3"
     commondir "0.0.1"
-    concat-stream "~1.4.1"
+    concat-stream "~1.4.11"
     console-browserify "~1.0.1"
     constants-browserify "~0.0.1"
     crypto-browserify "~1.0.9"
@@ -748,20 +748,21 @@ concat-stream@^1.6.0:
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
 
-concat-stream@~1.4.1, concat-stream@~1.4.5:
-  version "1.4.10"
-  resolved "https://registry.yarnpkg.com/concat-stream/-/concat-stream-1.4.10.tgz#acc3bbf5602cb8cc980c6ac840fa7d8603e3ef36"
+concat-stream@~1.4.1, concat-stream@1.4.11 concat-stream@~1.4.5:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/concat-stream/-/concat-stream-2.2.0.tgz"
   dependencies:
-    inherits "~2.0.1"
-    readable-stream "~1.1.9"
-    typedarray "~0.0.5"
+    buffer-from "^1.0.0"
+    inherits "~2.0.3"
+    readable-stream "~2.2.2"
+    typedarray "~0.0.6"
 
 concat-with-sourcemaps@^1.0.0:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/concat-with-sourcemaps/-/concat-with-sourcemaps-1.0.4.tgz#f55b3be2aeb47601b10a2d5259ccfb70fd2f1dd6"
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/concat-with-sourcemaps/-/concat-with-sourcemaps-1.1.0.tgz#d4ea93f05ae25790951b99e7b3b09e3908a4082e"
   dependencies:
-    source-map "^0.5.1"
-
+  source-map "^0.6.1"
+        
 connect-livereload@^0.6.0:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/connect-livereload/-/connect-livereload-0.6.1.tgz#1ac0c8bb9d9cfd5b28b629987a56a9239db9baaa"
@@ -3863,7 +3864,7 @@ source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
-
+        
 sparkles@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/sparkles/-/sparkles-1.0.0.tgz#1acbbfb592436d10bbe8f785b7cc6f82815012c3"
@@ -4682,3 +4683,4 @@ yargs@~3.5.4:
     decamelize "^1.0.0"
     window-size "0.1.0"
     wordwrap "0.0.2"
+    
