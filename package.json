@@ -53,12 +53,12 @@
     "yarn": "*"
   },
   "dependencies": {
-    "elasticlunr": "*",
-    "jquery": "*",
-    "lodash": "*",
-    "rivets": "*",
-    "sightglass": "*",
-    "tinycolor2": "*",
-    "vtt.js": "github:mozilla/vtt.js"
+    "elasticlunr": "^0.9.0",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.4",
+    "rivets": "^0.9.6",
+    "sightglass": "^0.2.4",
+    "tinycolor2": "^1.4.1",
+    "vtt.js": "github:mozilla/vtt.js#f823de8"
   }
 }
