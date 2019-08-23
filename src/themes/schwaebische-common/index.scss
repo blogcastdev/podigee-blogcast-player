@@ -1,0 +1,332 @@
+$background-color: #811547 !default;
+$text-color: #fff !default;
+$dark: #000 !default;
+
+$mobile-breakpoint: 800px;
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,700');
+
+.podcast-player {
+  &, *, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  background-color: $background-color;
+  color: $text-color;
+  font-family: 'Ubuntu', sans-serif;
+  min-width: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 1px;
+
+  button {
+    cursor: pointer;
+  }
+
+  .podcast-title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    margin-top: 92px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .episode-title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 20px auto 0;
+    text-align: center;
+    max-width: 50%;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+    }
+  }
+
+  .progress-bar-container {
+    left: 10%;
+    margin-top: 100px;
+    position: relative;
+    width: 80%;
+  }
+
+  .progress-bar {
+    clear: both;
+    cursor: ew-resize;
+    height: 10px;
+    position: relative;
+
+    .progress-bar-time-played {
+      color: $text-color;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 700;
+      position: absolute;
+      text-align: left;
+      top: 25px;
+      width: 70px;
+    }
+
+    .progress-bar-time-played:hover {
+      color: $dark;
+    }
+
+    .progress-bar-rail {
+      background-color: $text-color;
+      min-height: 3px;
+      position: relative;
+      top: 4px;
+    }
+  }
+
+  .progress-bar-played,
+  .progress-bar-loaded {
+    background-color: $dark;
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 0;
+  }
+
+  .progress-bar-played:after {
+    background-color: $text-color;
+    border-radius: 50px;
+    content: '';
+    height: 12px;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    width: 12px;
+  }
+
+  .progress-bar-loaded {
+    background-color: $text-color;
+  }
+
+  .progress-bar-buffering {
+    background-color: red;
+
+    &:after {
+      animation: move 2s linear infinite;
+      background-image: linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, .2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, .2) 50%,
+        rgba(255, 255, 255, .2) 75%,
+        transparent 75%,
+        transparent
+      );
+      background-size: 50px 50px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      content: "";
+      overflow: hidden;
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+    }
+
+    @keyframes move {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 50px 50px;
+      }
+    }
+  }
+
+  .duration {
+    color: $text-color;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 25px;
+    width: 70px;
+  }
+
+  .controls {
+    overflow: hidden;
+    text-align: center;
+
+    button {
+      background: none;
+      border: none;
+      color: $text-color;
+      outline: none;
+    }
+
+    .play-button {
+      font-size: 110px;
+      height: 110px;
+      margin: 0;
+      padding: 0;
+      width: 110px;
+    }
+
+    .forward-button,
+    .backward-button {
+      font-size: 36px;
+      padding: 0;
+      position: relative;
+      top: -30px;
+    }
+  }
+
+  &.loading .controls {
+    .play-button {
+      background: $text-color;
+      height: 107px;
+    }
+
+    .forward-button,
+    .backward-button {
+      top: -34px;
+    }
+  }
+
+  .graphics {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    width: 100%;
+
+    svg {
+      position: absolute;
+    }
+  }
+
+  .footer {
+    color: $text-color;
+    padding: 0 60px 30px;
+    width: 100%;
+
+    .subscribe-button {
+      background: transparent;
+      border: none;
+      color: $text-color;
+      font-size: 22px;
+      font-weight: bold;
+      margin-right: 5px;
+      outline: none;
+      padding: 0;
+    }
+
+    .podcast-connections-items {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      top: -3px;
+    }
+
+    .podcast-connections-item {
+      display: inline;
+      list-style: none;
+      margin-left: 10px;
+
+      a {
+        color: $text-color;
+        text-decoration: none;
+      }
+
+      svg {
+        fill: currentColor;
+        vertical-align: middle;
+      }
+
+      &.podcast-connections-item-alexa {
+        margin-left: 0;
+      }
+    }
+
+    .all-episodes-link {
+      color: $text-color;
+      float: right;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: .8px;
+      padding: 0;
+      text-decoration: none;
+    }
+  }
+}
+
+.podcast-player.mode-script {
+  @media (max-width: $mobile-breakpoint) {
+    .podcast-title {
+      margin-top: 80px;
+    }
+
+    .episode-title {
+      font-size: 28px;
+      margin: 0 auto;
+      max-width: 65%;
+    }
+
+    .progress-bar-container {
+      margin-bottom: 20px;
+      margin-top: 40px;
+    }
+
+    .footer {
+      padding: 0 30px 30px;
+    }
+
+    .graphics {
+      height: auto;
+      margin-bottom: -70px;
+      margin-top: 10px;
+      position: static;
+      text-align: center;
+
+      svg.icon {
+        left: auto;
+        position: static;
+        top: auto;
+      }
+    }
+  }
+}
+
+.podcast-player.mode-script {
+  @media (max-width: 460px) {
+    .footer {
+      text-align: center;
+      padding-bottom: 15px;
+    }
+
+    .all-episodes-link {
+      display: block;
+      float: none;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+    .podcast-player.loading .controls {
+      height: 110px;
+
+      .forward-button,
+      .backward-button {
+        top: 20px
+      }
+    }
+  }
+}
